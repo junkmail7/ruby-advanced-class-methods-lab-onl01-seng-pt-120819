@@ -44,9 +44,9 @@ class Song
   
   def self.new_from_filename(fn)
     song = self.new
-    song.name = fn.split(' - ')
-    song.artist_name = fn.split(' - ')
-    binding.pry
+    song.name = fn.split(' - ')[1].split('.')[0]
+    song.artist_name = fn.split(' - ')[0]
+    song
   end
 
   def self.create_from_filename(fn)
